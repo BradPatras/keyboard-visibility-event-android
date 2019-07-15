@@ -4,7 +4,7 @@
 
 
 <p align="center"> 
-	<img src="https://img.shields.io/badge/kotlin-v1.2.71-blue.svg" alt="Kotlin">
+	<img src="https://img.shields.io/badge/kotlin-v1.3.41-blue.svg" alt="Kotlin">
 	<img src="https://circleci.com/gh/viniciusmo/keyboard-visibility-event-android.svg?style=shield" alt="Build Status">
 	<img src="https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg" alt="Dependencies">
 	<img src="https://img.shields.io/github/issues/viniciusmo/keyboard-visibility-event-android.svg" alt="GitHub Issues">
@@ -36,15 +36,15 @@ allprojects {
 
 ```gradle
 dependencies {
-	implementation 'com.github.viniciusmo:keyboard-visibility-event-android:1.0.4'
+	implementation 'com.github.viniciusmo:keyboard-visibility-event-android:1.0.5'
 }
 ```
 
 **Step 3.** Code example
 ``` kotlin
 keyboard {
-    onClosed { alert("onClosed").show() }
-    onOpened { alert("onOpened").show() }
+    onClosed { Toast.makeText(this@MainActivity, "onClosed", Toast.LENGTH_SHORT).show() }
+    onOpened { Toast.makeText(this@MainActivity, "onOpened", Toast.LENGTH_SHORT).show() }
 }
 
 ```
@@ -59,5 +59,6 @@ Demo
 Special thanks
 --------
 <a href="https://github.com/yshrsmz">@yshrsmz</a></br>
-<a href="https://github.com/amadeu01">@amadeu01</a>
+<a href="https://github.com/amadeu01">@amadeu01</a></br>
+<a href="https://github.com/J-Jamet">@J-Jamet</a>
 
