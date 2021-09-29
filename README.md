@@ -1,7 +1,6 @@
 
 
 [![](https://jitpack.io/v/BradPatras/keyboard-visibility-event-android.svg)](https://jitpack.io/#BradPatras/keyboard-visibility-event-android)
-![Kotlin](https://img.shields.io/badge/kotlin-v1.3.41-blue.svg) 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## About
