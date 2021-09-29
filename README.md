@@ -1,11 +1,8 @@
 
-<p align="center"> 
-	<img src="https://img.shields.io/badge/kotlin-v1.3.41-blue.svg" alt="Kotlin">
-	<img src="https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg" alt="Dependencies">
-	<img src="https://img.shields.io/github/issues/bradpatras/keyboard-visibility-event-android.svg" alt="GitHub Issues">
-	<img src="https://img.shields.io/badge/contributions-welcome-violet.svg" alt="Contributions welcome">
-	<img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
-</p>
+
+[![](https://jitpack.io/v/BradPatras/keyboard-visibility-event-android.svg)](https://jitpack.io/#BradPatras/keyboard-visibility-event-android)
+![Kotlin](https://img.shields.io/badge/kotlin-v1.3.41-blue.svg) 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## About
 A DSL to handle soft keyboard visibility change event written in Kotlin.
