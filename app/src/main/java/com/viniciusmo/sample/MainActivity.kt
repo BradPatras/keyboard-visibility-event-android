@@ -1,9 +1,9 @@
 package com.viniciusmo.sample
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.viniciusmo.keyboardvisibility.keyboard
-import org.jetbrains.anko.alert
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,9 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         keyboard {
-            onClosed { alert("onClosed").show() }
-            onOpened { alert("onOpened").show() }
+            onClosed { Toast.makeText(this@MainActivity, "onClosed", Toast.LENGTH_SHORT).show() }
+            onOpened { Toast.makeText(this@MainActivity, "onOpened", Toast.LENGTH_SHORT).show() }
         }
-
     }
 }

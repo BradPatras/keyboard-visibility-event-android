@@ -2,16 +2,17 @@ package com.viniciusmo.keyboardvisibility
 
 import android.app.Activity
 import android.graphics.Rect
-import android.support.v4.app.Fragment
+import android.os.Build
 import android.view.View
 import android.view.ViewTreeObserver
+import androidx.fragment.app.Fragment
 
 class KeyBoardVisibility private constructor(getRootViewStrategy: GetRootViewStrategy,
                                              private var screenDensity: Float) {
 
     companion object {
 
-        private const val MAGIC_NUMBER = 200.0f
+        private const val MAGIC_NUMBER = 50.0f
 
         private fun getDensityScreen(from: Activity): Float {
             return from.resources.displayMetrics.density
@@ -63,8 +64,13 @@ class KeyBoardVisibility private constructor(getRootViewStrategy: GetRootViewStr
         rootView.viewTreeObserver?.addOnGlobalLayoutListener(onGlobalLayoutListener)
     }
 
+    @Suppress("DEPRECATION")
     private fun dispose() {
-        rootView.viewTreeObserver?.removeOnGlobalLayoutListener { onGlobalLayoutListener }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            rootView.viewTreeObserver?.removeOnGlobalLayoutListener { onGlobalLayoutListener }
+        } else {
+            rootView.viewTreeObserver?.removeGlobalOnLayoutListener { onGlobalLayoutListener }
+        }
     }
 
     fun setListener(initBlock: KeyboardVisibilityListenerBuilder.() -> Unit) {
